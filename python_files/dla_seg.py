@@ -4,7 +4,8 @@ import cv2
 import os
 # loading images
 image1 = cv2.imread("../input/research-paper-on-voip-technology-1-638.jpg")
-# hardcoded assigning of output images for the 3 input images
+print('If running first time create directory with output folders.')
+# hardcoded assigning of output images 
 output1_letter = image1.copy()
 output1_word = image1.copy()
 output1_line = image1.copy()
@@ -107,13 +108,11 @@ output1_letter = process_letter(th1,output1_letter)
 output1_word = process_word(th1,output1_word)
 output1_line = process_line(th1,output1_line)
 output1_par = process_par(th1,output1_par)
-#output1_margin = process_margin(th1,output1_par)
 
 cv2.imwrite("../output/letter/output1_letter.jpg", output1_letter)	
 cv2.imwrite("../output/word/output1_word.jpg", output1_word)
 cv2.imwrite("../output/line/output1_line.jpg", output1_line)
 cv2.imwrite("../output/par/output1_par.jpg", output1_par)
-#cv2.imwrite("output/margin/output1_margin.jpg", output1_par)
 
 
 
